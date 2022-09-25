@@ -6,6 +6,12 @@ const responseGoogle = response => {
   console.log(response);
 };
 
+componentDidMount = () => {
+  setInterval(() => {
+    window.parent.postMessage({ message: "getAppData", value: "MyDataToPass" }, "*");
+  }, 3000);
+};
+
 function App() {
   return (
     <div className="App">
