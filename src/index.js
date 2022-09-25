@@ -3,10 +3,9 @@ import ReactDOM from "react-dom";
 import { GoogleLogin } from "react-google-login";
 
 const responseGoogle = response => {
-  console.log(response);
-  setInterval(() => {
-    window.parent.postMessage({ message: "getAppData", value: "MyDataToPass" }, "*");
-  }, 3000);
+  // console.log(response);
+  console.log("Login Success: currentUser:", response);
+  window.parent.postMessage({ message: "getAppData", value: response }, "*");
 };
 
 
