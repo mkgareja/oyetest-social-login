@@ -6,7 +6,7 @@ const responseGoogle = response => {
   // console.log(response);
   console.log("Login Success: currentUser:", response);
   window.parent.postMessage({ message: "getAppData", value: response }, "*");
-  refreshTokenSetup(res);
+  refreshTokenSetup(response);
 };
 
 const refreshTokenSetup = (res) => {
