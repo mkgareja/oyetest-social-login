@@ -1,16 +1,14 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom";
 import { GoogleLogin } from "react-google-login";
 
 const responseGoogle = response => {
   console.log(response);
-};
-
-componentDidMount = () => {
   setInterval(() => {
     window.parent.postMessage({ message: "getAppData", value: "MyDataToPass" }, "*");
   }, 3000);
 };
+
 
 function App() {
   return (
