@@ -31,7 +31,7 @@ const refreshTokenSetup = (res) => {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ display: "inline-block" }}>
       <GoogleLogin
         clientId="796074674147-bu1oat7714eglvljkdpo4hfmcghd1a8n.apps.googleusercontent.com"
         render={(renderProps) => (
