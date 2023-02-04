@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { GoogleLogin } from "react-google-login";
 
@@ -30,6 +30,10 @@ const refreshTokenSetup = (res) => {
 };
 
 function App() {
+  useEffect(() => {
+    document.body.style.margin = 0;
+  }, []);
+
   return (
     <div className="App" style={{ display: "inline-block" }}>
       <GoogleLogin
